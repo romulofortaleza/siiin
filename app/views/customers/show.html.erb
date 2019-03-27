@@ -1,0 +1,67 @@
+<%= render 'header' %>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Mostrando customer</h5>
+        </div>
+        <div class="ibox-content">
+            <form class="form-horizontal">
+                              <div class="form-group"><label class="col-sm-2 control-label">Reason</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">
+                      <%= @customer.reason %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label class="col-sm-2 control-label">Cnpj</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">
+                      <%= @customer.cnpj %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label class="col-sm-2 control-label">Phone</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">
+                      <%= @customer.phone %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label class="col-sm-2 control-label">Mayor</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">
+                      <%= @customer.mayor %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label class="col-sm-2 control-label">Cpf mayor</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">
+                      <%= @customer.cpf_mayor %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label class="col-sm-2 control-label">City hall</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">
+                      <%= @customer.city_hall %>
+                    </p>
+                  </div>                  
+                </div>
+                            <div class="hr-line-dashed">
+              </div>                    
+              <div class="form-group">
+                  <div class="col-sm-4">
+                      <%= link_to 'Voltar', customers_path, :class => 'btn btn-white' %>            
+                      <%= link_to 'Editar', edit_customer_path(@customer), :class => "btn btn-primary" %>               
+                  </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
