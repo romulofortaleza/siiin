@@ -11,6 +11,7 @@ gem 'pg_search'
 # Login
 gem 'devise'
 
+
 gem 'popper_js'
 
 # Use SCSS for stylesheets
@@ -38,6 +39,7 @@ end
 
 group :development do
   gem 'pg'
+  gem 'rspec-rails'
 end
 
 # Use ActiveModel has_secure_password
