@@ -1,0 +1,20 @@
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" src="assets/stylesheets/base/navigation.scss" />
+
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0; background: linear-gradient(#ffffff, #31797c 25%)">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+          </div>
+          <ul class="nav navbar-top-links" style="text-align: center;">
+        <li>
+          <h1 style = color:white; font-family: 'Ubuntu', sans-serif;> Processo Convênio Eletrônico - PCE</h1>
+        </li>
+        <li class="pull-right" >
+          <% if user_signed_in? %>
+              <%= link_to fa_icon("sign-out", text:"Sair"), destroy_user_session_path, method: :delete, :class => "", :style => "color: #ffff; margin-top: 4px;" %></li>
+          <% end %>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,46 @@
+<%= render 'header' %>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Mostrando document_register</h5>
+        </div>
+        <div class="ibox-content">
+            <form class="form-horizontal">
+                              <div class="form-group"><label class="col-sm-2 control-label">Nome do Documento:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">
+                      <%= @document_register.name %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label class="col-sm-2 control-label">Insrumento Vinculado:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">
+                      <%= @document_register.instrument_registrations %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label class="col-sm-2 control-label">Documento Anexado:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">
+                      <%= @document_register.document_file %>
+                    </p>
+                  </div>                  
+                </div>
+                            <div class="hr-line-dashed">
+              </div>                    
+              <div class="form-group">
+                  <div class="col-sm-4">
+                      <%= link_to 'Voltar', document_registers_path, :class => 'btn btn-white' %>            
+                      <%= link_to 'Editar', edit_document_register_path(@document_register), :class => "btn btn-primary" %>               
+                  </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  

@@ -1,0 +1,18 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2><%= plural_table_name.titleize %></h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="<%%= url_for :controller => 'home', :action => 'index' %>">Home</a>
+      </li>
+      <li>
+        <a>Label</a>
+      </li>
+      <li class="active">
+        <strong><%= singular_table_name.titleize %></strong>
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2">
+  </div>
+</div>

@@ -1,0 +1,269 @@
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "biotec_development" ENCODING = 'utf8'[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "biotec_development" ENCODING = 'utf8'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8342337733006248720)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180903114430)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180903114430"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateInstrumentRegistrations (20180911184533)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "instrument_registrations" ("id" bigserial primary key, "instrument_number" integer, "internal_number" integer, "extra_number" integer, "object_agreement" character varying, "granting_organ" character varying, "linked_organ" character varying, "existence_im" character varying, "instituition_name" character varying, "value_transfer" character varying, "counterpart_value" character varying, "total" character varying, "signature_date" date, "end_date" date, "suspensive_date" date, "type" character varying, "address" character varying, "open_date" date, "organ" character varying, "user" character varying, "signature" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180911184533"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddFieldToCreateInstrumentRegistrations (20180919120635)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "instrument_registrations" ADD "instrument_type" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180919120635"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDocumentRegisters (20180921124452)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "document_registers" ("id" bigserial primary key, "name" character varying, "instrument_registrations_id" bigint, "document_file" bytea, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_024792976d"
+FOREIGN KEY ("instrument_registrations_id")
+  REFERENCES "instrument_registrations" ("id")
+)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE  INDEX  "index_document_registers_on_instrument_registrations_id" ON "document_registers"  ("instrument_registrations_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180921124452"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(8342337733006248720)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "romulofortaleza@pce.com.br"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Rômulo"], ["email", "romulofortaleza@pce.com.br"], ["encrypted_password", "$2a$11$6FfqjgGsbPVhPI.v549JguGwMCzHeNzw.tbCty2G.Z9Rfjwh4ne5."], ["created_at", "2019-03-26 13:45:46.374886"], ["updated_at", "2019-03-26 13:45:46.374886"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2019-03-26 10:46:03 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-03-26 10:46:03 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (67.8ms)
+Completed 200 OK in 23832ms (Views: 23767.3ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for ::1 at 2019-03-26 10:46:27 -0300
+Started GET "/assets/util.self-058acc63df74deca8f02557040aefca291a8a2a414f06aec1db224827c3a50c8.css?body=1" for ::1 at 2019-03-26 10:46:27 -0300
+Started GET "/assets/main.self-f5a7cdf8f68947ff64d294eef540edb6f44c48df63b521148fb3e1872911d484.css?body=1" for ::1 at 2019-03-26 10:46:27 -0300
+Started GET "/assets/dataTables/datatables.min.self-ca2a4585c54aaf152e8523922a960b5f956f8c3f1dbc68b780b0f59419efeb37.css?body=1" for ::1 at 2019-03-26 10:46:27 -0300
+Started GET "/assets/css-hamburgers/hamburgers.min.self-b3bfa2977fd7b52c934dad97e466658223fa6c4283413a19b70d5be4cd910b09.css?body=1" for ::1 at 2019-03-26 10:46:27 -0300
+Started GET "/assets/style.self-6379d16a69c9d59cb260a12e8f389f3e110164e631633d44d7b1f85a5b841a43.css?body=1" for ::1 at 2019-03-26 10:46:27 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/rails-ujs.self-3b600681e552d8090230990c0a2e8537aff48159bea540d275a620d272ba33a0.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/popper.self-23d0e4674571ef619dc97acba7169155cec531ebea3136429568f24ab0755da7.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/popover.self-ca78ba0a35d9471f5df51b8fafb26912ce912d4c04351c6efbad984c32c3e3cb.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/pdfjs/pdf.self-79a115ff57ba10432a6f6a4af5b90a22e141c87ac27ca6e61d6a3773e2afe765.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/pdfjs/pdf.worker.self-5bcdea6c00092279a2a50a8922c4f2850303e41ece02d48deb9b3d87271ec479.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/dataTables/datatables.min.self-b780cdd949f17bced4cdd9bc615568c5ee0eff74e024c214b12a216ef5064d3c.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/bootstrap/bootstrap.min.self-d6ce39ce73037670cfc183b1d73195f2b6f23565856af537a53efafedfe45a21.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2019-03-26 10:46:28 -0300
+Started GET "/assets/select2/select2.min.self-29080377793c2a531be0bad7d46aa3fcf1ede0008ebf68b1e4f97927f368ac38.js?body=1" for ::1 at 2019-03-26 10:46:29 -0300
+Started GET "/assets/tilt/tilt.jquery.min.self-8c343b24bfa1ada9122d5f5b38bfaa6fbcbf8f075dd751ff9d72c98278b46d9e.js?body=1" for ::1 at 2019-03-26 10:46:29 -0300
+Started GET "/assets/bootstrap/popper.min.self-f3a69a9249ed65c72f242a892d0c8223c6161d0c96e0ac9ae3e4356f832c6f5d.js?body=1" for ::1 at 2019-03-26 10:46:29 -0300
+Started GET "/assets/document_registers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-26 10:46:29 -0300
+Started GET "/assets/main.self-e163c51f810df56a70efa8622c26e00d2479bf6661cfd67bcf488d9722ef6e37.js?body=1" for ::1 at 2019-03-26 10:46:29 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for ::1 at 2019-03-26 10:46:29 -0300
+Started GET "/assets/system.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-26 10:46:29 -0300
+Started GET "/assets/application.self-068cf07d6ceeea13126d4d8fc4d77355cb04b58c2b8b9851b4afc703a2b65d2d.js?body=1" for ::1 at 2019-03-26 10:46:29 -0300
+Started GET "/assets/instrument_registrations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-26 10:46:29 -0300
+Started GET "/users/vendor/tilt/tilt.jquery.min.js" for ::1 at 2019-03-26 10:46:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/vendor/tilt/tilt.jquery.min.js"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+rack (2.0.5) lib/rack/handler/webrick.rb:86:in `service'
+/Users/hubtec/.rvm/rubies/ruby-2.6.0/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/hubtec/.rvm/rubies/ruby-2.6.0/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/hubtec/.rvm/rubies/ruby-2.6.0/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/users/vendor/tilt/tilt.jquery.min.js" for ::1 at 2019-03-26 10:46:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/vendor/tilt/tilt.jquery.min.js"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+rack (2.0.5) lib/rack/handler/webrick.rb:86:in `service'
+/Users/hubtec/.rvm/rubies/ruby-2.6.0/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/hubtec/.rvm/rubies/ruby-2.6.0/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/hubtec/.rvm/rubies/ruby-2.6.0/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+Started POST "/users/sign_in" for ::1 at 2019-03-26 10:46:59 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y7Srcl2QLrVzifr0TshM5b2hU/HQzcUFlYM2r5FwCjcb4qLuLualAySWWtT3U/jBq1NpEtfVgsbIqYi16NP37A==", "user"=>{"email"=>"romulofortaleza@pce.com.br", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "romulofortaleza@pce.com.br"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 535ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2019-03-26 10:47:00 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (13.1ms)
+  Rendered layouts/_topnavbar.html.erb (9.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 610ms (Views: 602.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/instrument_registrations" for ::1 at 2019-03-26 10:47:05 -0300
+Processing by InstrumentRegistrationsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering instrument_registrations/index.html.erb within layouts/application
+  Rendered instrument_registrations/_header.html.erb (32.9ms)
+  [1m[36mInstrumentRegistration Load (15.3ms)[0m  [1m[34mSELECT "instrument_registrations".* FROM "instrument_registrations"[0m
+  Rendered instrument_registrations/index.html.erb within layouts/application (94.4ms)
+  Rendered layouts/_navigation.html.erb (5.0ms)
+  Rendered layouts/_topnavbar.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 608ms (Views: 509.4ms | ActiveRecord: 32.4ms)
+
+
+Started GET "/" for ::1 at 2019-03-26 10:58:01 -0300
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_topnavbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (3.6ms)
+Completed 200 OK in 4184ms (Views: 4108.6ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for ::1 at 2019-03-26 10:58:05 -0300
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for ::1 at 2019-03-26 10:58:05 -0300
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for ::1 at 2019-03-26 10:58:05 -0300
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for ::1 at 2019-03-26 10:58:05 -0300
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/bootstrap/bootstrap.min.self-d6ce39ce73037670cfc183b1d73195f2b6f23565856af537a53efafedfe45a21.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/main.self-e163c51f810df56a70efa8622c26e00d2479bf6661cfd67bcf488d9722ef6e37.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/bootstrap/popper.min.self-f3a69a9249ed65c72f242a892d0c8223c6161d0c96e0ac9ae3e4356f832c6f5d.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/tilt/tilt.jquery.min.self-8c343b24bfa1ada9122d5f5b38bfaa6fbcbf8f075dd751ff9d72c98278b46d9e.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for ::1 at 2019-03-26 10:58:06 -0300
+Started GET "/assets/bootstrap/popover.self-ca78ba0a35d9471f5df51b8fafb26912ce912d4c04351c6efbad984c32c3e3cb.js?body=1" for ::1 at 2019-03-26 10:58:07 -0300
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for ::1 at 2019-03-26 10:58:07 -0300
+Started GET "/assets/select2/select2.min.self-29080377793c2a531be0bad7d46aa3fcf1ede0008ebf68b1e4f97927f368ac38.js?body=1" for ::1 at 2019-03-26 10:58:07 -0300
+Started GET "/instrument_registrations" for ::1 at 2019-03-26 10:58:11 -0300
+  
+ActionController::RoutingError (uninitialized constant InstrumentRegistrationsController):
+  
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+rack (2.0.5) lib/rack/handler/webrick.rb:86:in `service'
+/Users/hubtec/.rvm/rubies/ruby-2.6.0/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/hubtec/.rvm/rubies/ruby-2.6.0/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/hubtec/.rvm/rubies/ruby-2.6.0/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'

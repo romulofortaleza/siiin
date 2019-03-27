@@ -1,0 +1,169 @@
+<%= render 'header' %>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content-scaffold">
+        <center style="color:#49667d;"><h1> Instrumento <%= @instrument_registration.instrument_number %></h1></center>        
+        <div class="hr-line-dashed"></div>
+            <h3 style="color:#49667d;">I. Dados Gerais </h3>
+            <br>
+            <form class="form-horizontal">
+                <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Número Interno:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.internal_number %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Número Extra:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.extra_number %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Objeto do Convênio:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.object_agreement %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Orgão Concendente:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.granting_organ %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Orgão Vinculado:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.linked_organ %>
+                    </p>
+                  </div>                  
+                </div>
+                <br>
+                <h3 style="color:#49667d;"> II. Instituição Mandátaria - IM </h3>
+                <br>
+                 <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Há Existência de IM?</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.existence_im %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Nome da Instituição:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.instituition_name %>
+                    </p>
+                  </div>                  
+                </div>
+                <br>
+                <h3 style="color:#49667d;"> III. Valores </h3>
+                <br>
+                             <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Valor do Repasse:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.value_transfer %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Valor da Contrapartida:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.counterpart_value %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Total:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.total %>
+                    </p>
+                  </div>                  
+                </div>
+                <br>
+                  <h3 style="color:#49667d;">IV. Prazos</h3>    
+                <br>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Data de Assinatura:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.signature_date %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Data do Término de Vigência:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.end_date %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Data da Suspensiva:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.suspensive_date %>
+                    </p>
+                  </div>                  
+                </div>
+                <br>
+                  <h3 style="color:#49667d;">V. Especificações </h3>    
+                <br>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Tipo:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.instrument_type %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Endereço:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.address %>
+                    </p>
+                  </div>                  
+                </div>
+                <br>
+                  <h3 style="color:#49667d;"> VI. Dados da Inserção </h3>    
+                <br>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Data de Abertura:</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.open_date %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Orgão (Prefeitura):</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.organ %>
+                    </p>
+                  </div>                  
+                </div>
+                              <div class="form-group"><label style="color:#49667d;" class="col-sm-2 control-label">Perfil (Nome do Usuário):</label>
+                  <div class="col-sm-10">
+                    <p style="color:#565555;" class="form-control">
+                      <%= @instrument_registration.user %>
+                    </p>
+                  </div>                  
+                </div>
+                <div class="hr-line-dashed">
+                 <center style="color:#49667d;"><h1> Assinado por: <%= @instrument_registration.signature  %></h1></center>        
+              </div>                           
+              <br>
+              <br>
+                <div class="form-group">
+                  <div class="col-sm-4">
+                      <%= link_to 'Voltar', instrument_registrations_path, :class => 'btn btn-white' %>            
+                      <%= link_to 'Editar', edit_instrument_registration_path(@instrument_registration), :class => "btn btn-primary" %>               
+                  </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  

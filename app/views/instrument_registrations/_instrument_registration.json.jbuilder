@@ -1,0 +1,2 @@
+json.extract! instrument_registration, :id, :instrument_number, :internal_number, :extra_number, :object_agreement, :granting_organ, :linked_organ, :existence_im, :instituition_name, :value_transfer, :counterpart_value, :total, :signature_date, :end_date, :suspensive_date, :type, :address, :open_date, :organ, :user, :signature, :created_at, :updated_at
+json.url instrument_registration_url(instrument_registration, format: :json)

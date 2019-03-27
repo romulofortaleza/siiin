@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  instrument_number: 1
+  internal_number: 1
+  extra_number: 1
+  object_agreement: MyString
+  granting_organ: MyString
+  linked_organ: MyString
+  existence_im: MyString
+  instituition_name: MyString
+  value_transfer: MyString
+  counterpart_value: MyString
+  total: MyString
+  signature_date: 2018-09-11
+  end_date: 2018-09-11
+  suspensive_date: 2018-09-11
+  type: 
+  address: MyString
+  open_date: 2018-09-11
+  organ: MyString
+  user: MyString
+  signature: MyString
+
+two:
+  instrument_number: 1
+  internal_number: 1
+  extra_number: 1
+  object_agreement: MyString
+  granting_organ: MyString
+  linked_organ: MyString
+  existence_im: MyString
+  instituition_name: MyString
+  value_transfer: MyString
+  counterpart_value: MyString
+  total: MyString
+  signature_date: 2018-09-11
+  end_date: 2018-09-11
+  suspensive_date: 2018-09-11
+  type: 
+  address: MyString
+  open_date: 2018-09-11
+  organ: MyString
+  user: MyString
+  signature: MyString

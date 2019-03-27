@@ -1,0 +1,16 @@
+<%%= render 'header' %>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Nova <%= singular_table_name.titleize %></h5>
+        </div>
+        <div class="ibox-content">
+            <%%= render 'form', <%= singular_table_name %>: @<%= singular_table_name %> %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

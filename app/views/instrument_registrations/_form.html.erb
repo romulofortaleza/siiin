@@ -1,0 +1,209 @@
+<h3>I. Dados Gerais </h3>
+<br>
+<%= form_with(model: instrument_registration, local: true, class: 'form-horizontal') do |form| %>
+      <div class="form-group <%= instrument_registration.errors[:instrument_number].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Número do Instumento:</label>
+      <div class="col-sm-10">
+        <%= form.number_field :instrument_number, class: 'form-control' %>
+        <% if instrument_registration.errors[:instrument_number].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:instrument_number].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:internal_number].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Número Interno:</label>
+      <div class="col-sm-10">
+        <%= form.number_field :internal_number, class: 'form-control' %>
+        <% if instrument_registration.errors[:internal_number].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:internal_number].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:extra_number].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Número Extra:</label>
+      <div class="col-sm-10">
+        <%= form.number_field :extra_number, class: 'form-control' %>
+        <% if instrument_registration.errors[:extra_number].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:extra_number].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:object_agreement].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Objeto do Convênio:</label>
+      <div class="col-sm-10">
+        <%= form.text_field :object_agreement, class: 'form-control' %>
+        <% if instrument_registration.errors[:object_agreement].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:object_agreement].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:granting_organ].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Orgão Concendente:</label>
+      <div class="col-sm-10">
+        <%= form.text_field :granting_organ, class: 'form-control' %>
+        <% if instrument_registration.errors[:granting_organ].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:granting_organ].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:linked_organ].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Orgão Vinculado:</label>
+      <div class="col-sm-10">
+        <%= form.text_field :linked_organ, class: 'form-control' %>
+        <% if instrument_registration.errors[:linked_organ].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:linked_organ].first %></span>
+        <% end %>
+      </div>        
+    </div> 
+   <br>
+    <h3> II. Instituição Mandátaria - IM </h3>  
+  <br>
+      <div class="form-group <%= instrument_registration.errors[:existence_im].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Há Existência de IM?</label>
+      <div class="col-sm-10">
+        <%= select_tag 'instrument_registration[existence_im]', options_for_select(existence_im, 'Selecione'), class: 'form-control', selected: 'existence_im' %>
+        <%#= form.text_field :existence_im, class: 'form-control' %>
+        <% if instrument_registration.errors[:existence_im].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:existence_im].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:instituition_name].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Nome da Instituição:</label>
+      <div class="col-sm-10">
+        <%= form.text_field :instituition_name, class: 'form-control' %>
+        <% if instrument_registration.errors[:instituition_name].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:instituition_name].first %></span>
+        <% end %>
+      </div>
+    </div>
+    <br>
+    <h3> III. Valores </h3>
+    <br>
+      <div class="form-group <%= instrument_registration.errors[:value_transfer].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Valor de Repasse:</label>
+      <div class="col-sm-10">
+        <%= form.text_field :value_transfer, class: 'form-control' %>
+        <% if instrument_registration.errors[:value_transfer].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:value_transfer].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:counterpart_value].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Valor da Contrapartida:</label>
+      <div class="col-sm-10">
+        <%= form.text_field :counterpart_value, class: 'form-control' %>
+        <% if instrument_registration.errors[:counterpart_value].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:counterpart_value].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:total].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Total:</label>
+      <div class="col-sm-10">
+        <%= form.text_field :total, class: 'form-control' %>
+        <% if instrument_registration.errors[:total].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:total].first %></span>
+        <% end %>
+      </div>
+    </div>
+    <br>
+    <h3>IV. Prazos</h3>    
+    <br>
+      <div class="form-group <%= instrument_registration.errors[:signature_date].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Data de Assinatura:</label>
+      <div class="col-sm-10">
+        <%= form.date_select :signature_date, class: 'form-control' %>
+        <% if instrument_registration.errors[:signature_date].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:signature_date].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:end_date].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Data de Término de Vigência</label>
+      <div class="col-sm-10">
+        <%= form.date_select :end_date, class: 'form-control' %>
+        <% if instrument_registration.errors[:end_date].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:end_date].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:suspensive_date].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Data da Suspensiva</label>
+      <div class="col-sm-10">
+        <%= form.date_select :suspensive_date, class: 'form-control' %>
+        <% if instrument_registration.errors[:suspensive_date].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:suspensive_date].first %></span>
+        <% end %>
+      </div>
+    </div>
+    <br>
+    <h3>V. Especificações </h3>    
+    <br>
+      <div class="form-group <%= instrument_registration.errors[:instrument_type].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Tipo:</label>
+      <div class="col-sm-10">
+      <%= select_tag 'instrument_registration[instrument_type]', options_for_select(instrument_tp, 'Selecione'), class: 'form-control', selected: 'instrument_type' %>
+      <%#= select_tag 'instrument_registration[:instrument_type]', options_for_select(['Sim', 'Não'] class: 'form-control'. selected: :instrument_type) %>
+        <%#= form.text_field :type, class: 'form-control' %>
+        <% if instrument_registration.errors[:instrument_type].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:instrument_type].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:address].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Endereço:</label>
+      <div class="col-sm-10">
+        <%= form.text_field :address, class: 'form-control' %>
+        <% if instrument_registration.errors[:address].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:address].first %></span>
+        <% end %>
+      </div>
+    </div>
+    <br>
+    <h3> VI. Dados da Inserção </h3>    
+    <br>
+      <div class="form-group <%= instrument_registration.errors[:open_date].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Data de Abertura</label>
+      <div class="col-sm-10">
+        <%= form.date_select :open_date, class: 'form-control' %>
+        <% if instrument_registration.errors[:open_date].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:open_date].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:organ].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Orgão:</label>
+      <div class="col-sm-10">
+        <%= form.text_field :organ, class: 'form-control' %>
+        <% if instrument_registration.errors[:organ].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:organ].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:user].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Perfil:</label>
+      <div class="col-sm-10">
+        <%= form.text_field :user, class: 'form-control' %>
+        <% if instrument_registration.errors[:user].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:user].first %></span>
+        <% end %>
+      </div>
+    </div>    
+      <div class="form-group <%= instrument_registration.errors[:signature].any? ? 'has-error' : '' %>">
+      <label class="col-sm-2 control-label">Assinatura</label>
+      <div class="col-sm-10">
+        <%= form.text_field :signature, class: 'form-control' %>
+        <% if instrument_registration.errors[:signature].any? %>
+          <span class="help-block m-b-none font-bold"><%= instrument_registration.errors[:signature].first %></span>
+        <% end %>
+      </div>
+    </div>    
+    <div class="hr-line-dashed"></div>
+  <div class="form-group">
+    <div class="col-sm-4 col-sm-offset-2">
+        <%= link_to 'Cancelar', instrument_registrations_path, :class => 'btn btn-white' %>     
+        <%= form.submit 'Salvar', :class => 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>

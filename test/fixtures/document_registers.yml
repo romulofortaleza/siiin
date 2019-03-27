@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  instrument_registrations: one
+  document_file: 
+
+two:
+  name: MyString
+  instrument_registrations: two
+  document_file: 
