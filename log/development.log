@@ -4102,3 +4102,349 @@ Started GET "/assets/activities.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44
 Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2019-03-28 14:03:19 -0300
 Started GET "/assets/system.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2019-03-28 14:03:19 -0300
 Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2019-03-28 14:03:19 -0300
+Started GET "/" for ::1 at 2019-03-28 15:37:48 -0300
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_topnavbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 1577ms (Views: 1521.0ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/assets/main.self-f5a7cdf8f68947ff64d294eef540edb6f44c48df63b521148fb3e1872911d484.css?body=1" for ::1 at 2019-03-28 15:37:50 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for ::1 at 2019-03-28 15:37:50 -0300
+Started GET "/assets/css-hamburgers/hamburgers.min.self-b3bfa2977fd7b52c934dad97e466658223fa6c4283413a19b70d5be4cd910b09.css?body=1" for ::1 at 2019-03-28 15:37:50 -0300
+Started GET "/assets/dataTables/datatables.min.self-ca2a4585c54aaf152e8523922a960b5f956f8c3f1dbc68b780b0f59419efeb37.css?body=1" for ::1 at 2019-03-28 15:37:50 -0300
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for ::1 at 2019-03-28 15:37:50 -0300
+Started GET "/assets/style.self-c360d252a53d52a840c8439b6485778786161ba14a344e015aa312ac8dfe546c.css?body=1" for ::1 at 2019-03-28 15:37:50 -0300
+Started GET "/assets/util.self-058acc63df74deca8f02557040aefca291a8a2a414f06aec1db224827c3a50c8.css?body=1" for ::1 at 2019-03-28 15:37:50 -0300
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for ::1 at 2019-03-28 15:37:50 -0300
+Started GET "/assets/rails-ujs.self-d109d8c5c0194c8ad60b8838b2661c5596b5c955987f7cd4045eb2fb90ca5343.js?body=1" for ::1 at 2019-03-28 15:37:50 -0300
+Started GET "/assets/activities.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/system.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/popper.self-70e1b2b78096eb80eb35ebac513e7a8007033ee3e881919cfdca4ece7779cffd.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/affix.self-b2bd74404ab3c627c5129dcdd3bdc2fc0a9d4bff4e1b6f1bae96412f9a1e9723.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/alert.self-7c7aa23778284da0e4aa395a0a6d858c7efd891c9312fe71908b28292654ac0c.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/collapse.self-4db094cc14a1aafa93e51e6f298115323037bb9e24c060dd0de52f27446f6227.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/carousel.self-c2c0ad2347d3fdd8447abd9d5792efed40ad5afadc5e0de3001e34904a6f68ce.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/button.self-b7a8ce9f47662b97ab74ef3dd416e93d3a4f644b252307a28231976a0149feef.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/modal.self-4ca048907279f4bb9187ba2541ae5d03296917d5c42e8fef0b58ec31c8902f0f.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/tab.self-7fbfa844201ceeb4b896e4d185a33df19a284fe461281b7c0f78dbea2ef6da5a.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/scrollspy.self-e62629e47ba5fe8b7faaa745f2fef2ccdb1bfd56ffb4f95615684ef40c74bcc4.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/popover.self-ca78ba0a35d9471f5df51b8fafb26912ce912d4c04351c6efbad984c32c3e3cb.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/tooltip.self-82858d5843f55bfed321ea59fc5b180f3d2a8afc498ebc4d665561110b807875.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/transition.self-3c74f1999fcbf39cfb240b67c9a9e900863859f82f53fb27e5a388fe5e1a1c5c.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/dataTables/datatables.min.self-b780cdd949f17bced4cdd9bc615568c5ee0eff74e024c214b12a216ef5064d3c.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/pdfjs/pdf.self-79a115ff57ba10432a6f6a4af5b90a22e141c87ac27ca6e61d6a3773e2afe765.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/pdfjs/pdf.worker.self-5bcdea6c00092279a2a50a8922c4f2850303e41ece02d48deb9b3d87271ec479.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/popper.min.self-f3a69a9249ed65c72f242a892d0c8223c6161d0c96e0ac9ae3e4356f832c6f5d.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/select2/select2.min.self-29080377793c2a531be0bad7d46aa3fcf1ede0008ebf68b1e4f97927f368ac38.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/tilt/tilt.jquery.min.self-8c343b24bfa1ada9122d5f5b38bfaa6fbcbf8f075dd751ff9d72c98278b46d9e.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/application.self-068cf07d6ceeea13126d4d8fc4d77355cb04b58c2b8b9851b4afc703a2b65d2d.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/bootstrap/bootstrap.min.self-d6ce39ce73037670cfc183b1d73195f2b6f23565856af537a53efafedfe45a21.js?body=1" for ::1 at 2019-03-28 15:37:51 -0300
+Started GET "/assets/main.self-e163c51f810df56a70efa8622c26e00d2479bf6661cfd67bcf488d9722ef6e37.js?body=1" for ::1 at 2019-03-28 15:37:52 -0300
+Started GET "/assets/bootstrap/dropdown.self-7efa4aa654357ae664a98ec52151c25cd4927eacd1fabe038d068d9344b62cbd.js?body=1" for ::1 at 2019-03-28 15:37:52 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for ::1 at 2019-03-28 15:37:52 -0300
+Started GET "/customers" for ::1 at 2019-03-28 15:38:00 -0300
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application
+  Rendered customers/_header.html.erb (2.8ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (182.2ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_topnavbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 545ms (Views: 475.9ms | ActiveRecord: 49.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-28 15:38:19 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (15.1ms)
+  Rendered layouts/_topnavbar.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 540ms (Views: 525.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/activities" for ::1 at 2019-03-28 15:38:21 -0300
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/index.html.erb within layouts/application
+  Rendered activities/_header.html.erb (0.9ms)
+  [1m[36mActivity Load (1.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered activities/index.html.erb within layouts/application (59.1ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_topnavbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 538ms (Views: 488.0ms | ActiveRecord: 9.0ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/activities" for ::1 at 2019-03-28 16:22:57 -0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/index.html.erb within layouts/application
+  Rendered activities/_header.html.erb (2.1ms)
+  [1m[36mActivity Load (1.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered activities/index.html.erb within layouts/application (137.1ms)
+  Rendered layouts/_navigation.html.erb (6.0ms)
+  Rendered layouts/_topnavbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+Completed 200 OK in 1648ms (Views: 1571.2ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/css-hamburgers/hamburgers.min.self-b3bfa2977fd7b52c934dad97e466658223fa6c4283413a19b70d5be4cd910b09.css?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/main.self-f5a7cdf8f68947ff64d294eef540edb6f44c48df63b521148fb3e1872911d484.css?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/dataTables/datatables.min.self-ca2a4585c54aaf152e8523922a960b5f956f8c3f1dbc68b780b0f59419efeb37.css?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/style.self-c360d252a53d52a840c8439b6485778786161ba14a344e015aa312ac8dfe546c.css?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/popper.self-70e1b2b78096eb80eb35ebac513e7a8007033ee3e881919cfdca4ece7779cffd.js?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/rails-ujs.self-d109d8c5c0194c8ad60b8838b2661c5596b5c955987f7cd4045eb2fb90ca5343.js?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/util.self-058acc63df74deca8f02557040aefca291a8a2a414f06aec1db224827c3a50c8.css?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/bootstrap/affix.self-b2bd74404ab3c627c5129dcdd3bdc2fc0a9d4bff4e1b6f1bae96412f9a1e9723.js?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/bootstrap/alert.self-7c7aa23778284da0e4aa395a0a6d858c7efd891c9312fe71908b28292654ac0c.js?body=1" for ::1 at 2019-03-28 16:22:59 -0300
+Started GET "/assets/bootstrap/button.self-b7a8ce9f47662b97ab74ef3dd416e93d3a4f644b252307a28231976a0149feef.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/bootstrap/collapse.self-4db094cc14a1aafa93e51e6f298115323037bb9e24c060dd0de52f27446f6227.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/bootstrap/carousel.self-c2c0ad2347d3fdd8447abd9d5792efed40ad5afadc5e0de3001e34904a6f68ce.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/bootstrap/modal.self-4ca048907279f4bb9187ba2541ae5d03296917d5c42e8fef0b58ec31c8902f0f.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/bootstrap/scrollspy.self-e62629e47ba5fe8b7faaa745f2fef2ccdb1bfd56ffb4f95615684ef40c74bcc4.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/bootstrap/tab.self-7fbfa844201ceeb4b896e4d185a33df19a284fe461281b7c0f78dbea2ef6da5a.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/bootstrap/tooltip.self-82858d5843f55bfed321ea59fc5b180f3d2a8afc498ebc4d665561110b807875.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/bootstrap/popover.self-ca78ba0a35d9471f5df51b8fafb26912ce912d4c04351c6efbad984c32c3e3cb.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/bootstrap/transition.self-3c74f1999fcbf39cfb240b67c9a9e900863859f82f53fb27e5a388fe5e1a1c5c.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/dataTables/datatables.min.self-b780cdd949f17bced4cdd9bc615568c5ee0eff74e024c214b12a216ef5064d3c.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/pdfjs/pdf.self-79a115ff57ba10432a6f6a4af5b90a22e141c87ac27ca6e61d6a3773e2afe765.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/pdfjs/pdf.worker.self-5bcdea6c00092279a2a50a8922c4f2850303e41ece02d48deb9b3d87271ec479.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/bootstrap/dropdown.self-7efa4aa654357ae664a98ec52151c25cd4927eacd1fabe038d068d9344b62cbd.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/activities.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/bootstrap/bootstrap.min.self-d6ce39ce73037670cfc183b1d73195f2b6f23565856af537a53efafedfe45a21.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/system.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/main.self-e163c51f810df56a70efa8622c26e00d2479bf6661cfd67bcf488d9722ef6e37.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/bootstrap/popper.min.self-f3a69a9249ed65c72f242a892d0c8223c6161d0c96e0ac9ae3e4356f832c6f5d.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/select2/select2.min.self-29080377793c2a531be0bad7d46aa3fcf1ede0008ebf68b1e4f97927f368ac38.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/tilt/tilt.jquery.min.self-8c343b24bfa1ada9122d5f5b38bfaa6fbcbf8f075dd751ff9d72c98278b46d9e.js?body=1" for ::1 at 2019-03-28 16:23:00 -0300
+Started GET "/assets/application.self-068cf07d6ceeea13126d4d8fc4d77355cb04b58c2b8b9851b4afc703a2b65d2d.js?body=1" for ::1 at 2019-03-28 16:23:01 -0300
+Started GET "/activities" for ::1 at 2019-03-28 16:23:44 -0300
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/index.html.erb within layouts/application
+  Rendered activities/_header.html.erb (0.8ms)
+  [1m[36mActivity Load (2.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered activities/index.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_topnavbar.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 346ms (Views: 320.8ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/dataTables/datatables.min.self-ca2a4585c54aaf152e8523922a960b5f956f8c3f1dbc68b780b0f59419efeb37.css?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/css-hamburgers/hamburgers.min.self-b3bfa2977fd7b52c934dad97e466658223fa6c4283413a19b70d5be4cd910b09.css?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/main.self-f5a7cdf8f68947ff64d294eef540edb6f44c48df63b521148fb3e1872911d484.css?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/util.self-058acc63df74deca8f02557040aefca291a8a2a414f06aec1db224827c3a50c8.css?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/rails-ujs.self-d109d8c5c0194c8ad60b8838b2661c5596b5c955987f7cd4045eb2fb90ca5343.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/style.self-c360d252a53d52a840c8439b6485778786161ba14a344e015aa312ac8dfe546c.css?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/popper.self-70e1b2b78096eb80eb35ebac513e7a8007033ee3e881919cfdca4ece7779cffd.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/carousel.self-c2c0ad2347d3fdd8447abd9d5792efed40ad5afadc5e0de3001e34904a6f68ce.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/button.self-b7a8ce9f47662b97ab74ef3dd416e93d3a4f644b252307a28231976a0149feef.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/alert.self-7c7aa23778284da0e4aa395a0a6d858c7efd891c9312fe71908b28292654ac0c.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/dropdown.self-7efa4aa654357ae664a98ec52151c25cd4927eacd1fabe038d068d9344b62cbd.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/modal.self-4ca048907279f4bb9187ba2541ae5d03296917d5c42e8fef0b58ec31c8902f0f.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/collapse.self-4db094cc14a1aafa93e51e6f298115323037bb9e24c060dd0de52f27446f6227.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/affix.self-b2bd74404ab3c627c5129dcdd3bdc2fc0a9d4bff4e1b6f1bae96412f9a1e9723.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/scrollspy.self-e62629e47ba5fe8b7faaa745f2fef2ccdb1bfd56ffb4f95615684ef40c74bcc4.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/tab.self-7fbfa844201ceeb4b896e4d185a33df19a284fe461281b7c0f78dbea2ef6da5a.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/transition.self-3c74f1999fcbf39cfb240b67c9a9e900863859f82f53fb27e5a388fe5e1a1c5c.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/tooltip.self-82858d5843f55bfed321ea59fc5b180f3d2a8afc498ebc4d665561110b807875.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap/popover.self-ca78ba0a35d9471f5df51b8fafb26912ce912d4c04351c6efbad984c32c3e3cb.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for ::1 at 2019-03-28 16:23:45 -0300
+Started GET "/assets/dataTables/datatables.min.self-b780cdd949f17bced4cdd9bc615568c5ee0eff74e024c214b12a216ef5064d3c.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/pdfjs/pdf.self-79a115ff57ba10432a6f6a4af5b90a22e141c87ac27ca6e61d6a3773e2afe765.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/bootstrap/bootstrap.min.self-d6ce39ce73037670cfc183b1d73195f2b6f23565856af537a53efafedfe45a21.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/bootstrap/popper.min.self-f3a69a9249ed65c72f242a892d0c8223c6161d0c96e0ac9ae3e4356f832c6f5d.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/select2/select2.min.self-29080377793c2a531be0bad7d46aa3fcf1ede0008ebf68b1e4f97927f368ac38.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/pdfjs/pdf.worker.self-5bcdea6c00092279a2a50a8922c4f2850303e41ece02d48deb9b3d87271ec479.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/activities.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/main.self-e163c51f810df56a70efa8622c26e00d2479bf6661cfd67bcf488d9722ef6e37.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/tilt/tilt.jquery.min.self-8c343b24bfa1ada9122d5f5b38bfaa6fbcbf8f075dd751ff9d72c98278b46d9e.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/system.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/assets/application.self-068cf07d6ceeea13126d4d8fc4d77355cb04b58c2b8b9851b4afc703a2b65d2d.js?body=1" for ::1 at 2019-03-28 16:23:46 -0300
+Started GET "/activities" for ::1 at 2019-03-28 16:25:16 -0300
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/index.html.erb within layouts/application
+  Rendered activities/_header.html.erb (0.7ms)
+  [1m[36mActivity Load (1.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered activities/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_topnavbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 207ms (Views: 187.0ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/assets/style.self-c360d252a53d52a840c8439b6485778786161ba14a344e015aa312ac8dfe546c.css?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/rails-ujs.self-d109d8c5c0194c8ad60b8838b2661c5596b5c955987f7cd4045eb2fb90ca5343.js?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/popper.self-70e1b2b78096eb80eb35ebac513e7a8007033ee3e881919cfdca4ece7779cffd.js?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/dataTables/datatables.min.self-ca2a4585c54aaf152e8523922a960b5f956f8c3f1dbc68b780b0f59419efeb37.css?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/main.self-f5a7cdf8f68947ff64d294eef540edb6f44c48df63b521148fb3e1872911d484.css?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/util.self-058acc63df74deca8f02557040aefca291a8a2a414f06aec1db224827c3a50c8.css?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/bootstrap/alert.self-7c7aa23778284da0e4aa395a0a6d858c7efd891c9312fe71908b28292654ac0c.js?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/css-hamburgers/hamburgers.min.self-b3bfa2977fd7b52c934dad97e466658223fa6c4283413a19b70d5be4cd910b09.css?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/bootstrap/affix.self-b2bd74404ab3c627c5129dcdd3bdc2fc0a9d4bff4e1b6f1bae96412f9a1e9723.js?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/bootstrap/button.self-b7a8ce9f47662b97ab74ef3dd416e93d3a4f644b252307a28231976a0149feef.js?body=1" for ::1 at 2019-03-28 16:25:16 -0300
+Started GET "/assets/bootstrap/modal.self-4ca048907279f4bb9187ba2541ae5d03296917d5c42e8fef0b58ec31c8902f0f.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/bootstrap/collapse.self-4db094cc14a1aafa93e51e6f298115323037bb9e24c060dd0de52f27446f6227.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/bootstrap/carousel.self-c2c0ad2347d3fdd8447abd9d5792efed40ad5afadc5e0de3001e34904a6f68ce.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/bootstrap/dropdown.self-7efa4aa654357ae664a98ec52151c25cd4927eacd1fabe038d068d9344b62cbd.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/bootstrap/tab.self-7fbfa844201ceeb4b896e4d185a33df19a284fe461281b7c0f78dbea2ef6da5a.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/bootstrap/scrollspy.self-e62629e47ba5fe8b7faaa745f2fef2ccdb1bfd56ffb4f95615684ef40c74bcc4.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/bootstrap/transition.self-3c74f1999fcbf39cfb240b67c9a9e900863859f82f53fb27e5a388fe5e1a1c5c.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/bootstrap/tooltip.self-82858d5843f55bfed321ea59fc5b180f3d2a8afc498ebc4d665561110b807875.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/bootstrap/popover.self-ca78ba0a35d9471f5df51b8fafb26912ce912d4c04351c6efbad984c32c3e3cb.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/dataTables/datatables.min.self-b780cdd949f17bced4cdd9bc615568c5ee0eff74e024c214b12a216ef5064d3c.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/pdfjs/pdf.self-79a115ff57ba10432a6f6a4af5b90a22e141c87ac27ca6e61d6a3773e2afe765.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/pdfjs/pdf.worker.self-5bcdea6c00092279a2a50a8922c4f2850303e41ece02d48deb9b3d87271ec479.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/bootstrap/popper.min.self-f3a69a9249ed65c72f242a892d0c8223c6161d0c96e0ac9ae3e4356f832c6f5d.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/bootstrap/bootstrap.min.self-d6ce39ce73037670cfc183b1d73195f2b6f23565856af537a53efafedfe45a21.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/main.self-e163c51f810df56a70efa8622c26e00d2479bf6661cfd67bcf488d9722ef6e37.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/tilt/tilt.jquery.min.self-8c343b24bfa1ada9122d5f5b38bfaa6fbcbf8f075dd751ff9d72c98278b46d9e.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/select2/select2.min.self-29080377793c2a531be0bad7d46aa3fcf1ede0008ebf68b1e4f97927f368ac38.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/activities.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/application.self-068cf07d6ceeea13126d4d8fc4d77355cb04b58c2b8b9851b4afc703a2b65d2d.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/assets/system.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:25:17 -0300
+Started GET "/activities" for ::1 at 2019-03-28 16:34:39 -0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering activities/index.html.erb within layouts/application
+  Rendered activities/_header.html.erb (1.9ms)
+  [1m[36mActivity Load (1.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered activities/index.html.erb within layouts/application (124.7ms)
+  Rendered layouts/_navigation.html.erb (4.8ms)
+  Rendered layouts/_topnavbar.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1484ms (Views: 1392.3ms | ActiveRecord: 33.8ms)
+
+
+Started GET "/assets/style.self-c360d252a53d52a840c8439b6485778786161ba14a344e015aa312ac8dfe546c.css?body=1" for ::1 at 2019-03-28 16:34:40 -0300
+Started GET "/assets/dataTables/datatables.min.self-ca2a4585c54aaf152e8523922a960b5f956f8c3f1dbc68b780b0f59419efeb37.css?body=1" for ::1 at 2019-03-28 16:34:40 -0300
+Started GET "/assets/main.self-f5a7cdf8f68947ff64d294eef540edb6f44c48df63b521148fb3e1872911d484.css?body=1" for ::1 at 2019-03-28 16:34:40 -0300
+Started GET "/assets/animate/animate.self-570992b3ad6a262de1924aa4ecc17a6f9cf45cb8fd0daaf3cfe5a9f2f3e08e2e.css?body=1" for ::1 at 2019-03-28 16:34:40 -0300
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/application.self-57a5f2f33d24688136dc6332b520d3b3a2ccbecbbf5034f5c20480f3e4d12d6b.css?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/rails-ujs.self-d109d8c5c0194c8ad60b8838b2661c5596b5c955987f7cd4045eb2fb90ca5343.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/popper.self-70e1b2b78096eb80eb35ebac513e7a8007033ee3e881919cfdca4ece7779cffd.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/jquery/jquery-3.1.1.min.self-9347a28e490a684188bc8e7748f6f086a53a87088854ac4de47095f42a085b5b.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/affix.self-b2bd74404ab3c627c5129dcdd3bdc2fc0a9d4bff4e1b6f1bae96412f9a1e9723.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/alert.self-7c7aa23778284da0e4aa395a0a6d858c7efd891c9312fe71908b28292654ac0c.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/button.self-b7a8ce9f47662b97ab74ef3dd416e93d3a4f644b252307a28231976a0149feef.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/carousel.self-c2c0ad2347d3fdd8447abd9d5792efed40ad5afadc5e0de3001e34904a6f68ce.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/collapse.self-4db094cc14a1aafa93e51e6f298115323037bb9e24c060dd0de52f27446f6227.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/dropdown.self-7efa4aa654357ae664a98ec52151c25cd4927eacd1fabe038d068d9344b62cbd.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/css-hamburgers/hamburgers.min.self-b3bfa2977fd7b52c934dad97e466658223fa6c4283413a19b70d5be4cd910b09.css?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/modal.self-4ca048907279f4bb9187ba2541ae5d03296917d5c42e8fef0b58ec31c8902f0f.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/scrollspy.self-e62629e47ba5fe8b7faaa745f2fef2ccdb1bfd56ffb4f95615684ef40c74bcc4.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/transition.self-3c74f1999fcbf39cfb240b67c9a9e900863859f82f53fb27e5a388fe5e1a1c5c.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/tooltip.self-82858d5843f55bfed321ea59fc5b180f3d2a8afc498ebc4d665561110b807875.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/popover.self-ca78ba0a35d9471f5df51b8fafb26912ce912d4c04351c6efbad984c32c3e3cb.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap/tab.self-7fbfa844201ceeb4b896e4d185a33df19a284fe461281b7c0f78dbea2ef6da5a.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/util.self-058acc63df74deca8f02557040aefca291a8a2a414f06aec1db224827c3a50c8.css?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/metisMenu/jquery.metisMenu.self-587029531d977fc7fa10623dd670189a298bd606124c23fc2edd051da5b0c914.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/dataTables/datatables.min.self-b780cdd949f17bced4cdd9bc615568c5ee0eff74e024c214b12a216ef5064d3c.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/pdfjs/pdf.self-79a115ff57ba10432a6f6a4af5b90a22e141c87ac27ca6e61d6a3773e2afe765.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/select2/select2.min.self-29080377793c2a531be0bad7d46aa3fcf1ede0008ebf68b1e4f97927f368ac38.js?body=1" for ::1 at 2019-03-28 16:34:41 -0300
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/notifyjs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/pdfjs/pdf.worker.self-5bcdea6c00092279a2a50a8922c4f2850303e41ece02d48deb9b3d87271ec479.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/activities.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/system.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/pace/pace.min.self-9bf6d667514a59744d5db2c9392aaf5595dec9c131a425ababa1cb8cddb814f2.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/slimscroll/jquery.slimscroll.min.self-a2008e2992d055fbe5108d326a54c3083f843da1a30240d2b2e1f706716fa03e.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/notifyjs/notify.self-580979233c906abe103d95ccdbfe97994e5a03d69946ab5b2f74dc3a667fde52.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/tilt/tilt.jquery.min.self-8c343b24bfa1ada9122d5f5b38bfaa6fbcbf8f075dd751ff9d72c98278b46d9e.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/main.self-e163c51f810df56a70efa8622c26e00d2479bf6661cfd67bcf488d9722ef6e37.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/inspinia.self-0105b2740ac6f751553fae37cd22fd48eee7a5092c5c29e32b685e736a59e704.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/bootstrap/popper.min.self-f3a69a9249ed65c72f242a892d0c8223c6161d0c96e0ac9ae3e4356f832c6f5d.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/bootstrap/bootstrap.min.self-d6ce39ce73037670cfc183b1d73195f2b6f23565856af537a53efafedfe45a21.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/application.self-068cf07d6ceeea13126d4d8fc4d77355cb04b58c2b8b9851b4afc703a2b65d2d.js?body=1" for ::1 at 2019-03-28 16:34:42 -0300
+Started GET "/assets/dataTables/pdfmake.min.js.map" for ::1 at 2019-03-28 16:35:38 -0300
+Started GET "/customers" for ::1 at 2019-03-28 16:35:44 -0300
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application
+  Rendered customers/_header.html.erb (1.2ms)
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_topnavbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 243ms (Views: 226.8ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/assets/dataTables/pdfmake.min.js.map" for ::1 at 2019-03-28 16:35:46 -0300
+Started GET "/" for ::1 at 2019-03-28 16:35:52 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_topnavbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 275ms (Views: 268.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/dataTables/pdfmake.min.js.map" for ::1 at 2019-03-28 16:35:54 -0300
