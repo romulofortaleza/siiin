@@ -25,14 +25,12 @@
 #   timeout: 5000
 
 default: &default
-  adapter: postgresql
-  username: biotec
-  password: 1020304050
-  host: 127.0.0.1
-  # For details on connection pooling, see Rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
+ adapter: postgresql
+ encoding: unicode
+ host: localhost
+ pool: 5
+ username: ramf
+ password: ramfbr08
 development:
-  <<: *default
-  database: biotec_development
+ <<: *default
+ database: pce_development
