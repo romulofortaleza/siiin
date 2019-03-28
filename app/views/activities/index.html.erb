@@ -1,0 +1,55 @@
+<%= render 'header' %>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Activities</h5>
+          <div class="ibox-tools">
+            <a class="collapse-link">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+          </div>
+        </div>
+        <div class="ibox-content">
+          <table class="table table-striped table-hover table-results">
+            <thead>
+              <tr>
+                                  <th>Customer</th>
+                                  <th>Subject</th>
+                                  <th>Activity</th>
+                                  <th>Anexo</th>
+                                
+                <th class="col-sm-3">Ações</th>
+              </tr>
+            </thead>            
+            <tbody>
+              <% @activities.each do |activity| %>
+                <tr>
+                                      <td><%= activity.customer.reason %></td>
+                                      <td><%= activity.subject %></td>
+                                      <td><%= activity.activity %></td>
+                                      <td><%= activity.file.name %></td>
+                                    <td>
+                    <%= link_to fa_icon('eye'),  activity, class: 'btn btn-sm btn-success' %>                    
+                    <%= link_to fa_icon('edit'), edit_activity_path(activity), class: 'btn btn-sm btn-warning' %>
+                    <%= link_to fa_icon('trash'), activity, method: :delete, data: { confirm: I18n.t('app.messages.are_you_sure') }, class: 'btn btn-sm btn-danger' %>                    
+                  </td>                    
+                </tr>
+              <% end %>
+            </tbody>            
+            <tfoot>
+              <tr>
+                <td>                  
+                  <%= link_to fa_icon('plus'), new_activity_path, class: 'btn btn-md btn-primary' %></td>                  
+                <td></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>

@@ -1,4 +1,5 @@
 Myapp::Application.routes.draw do
+  resources :activities
   resources :customers
   resources :document_registers
   resources :instrument_registrations
