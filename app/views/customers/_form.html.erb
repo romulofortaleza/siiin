@@ -11,7 +11,7 @@
       <div class="form-group <%= customer.errors[:cnpj].any? ? 'has-error' : '' %>">
       <label class="col-sm-2 control-label">Cnpj</label>
       <div class="col-sm-10">
-        <%= form.text_field :cnpj, class: 'form-control' %>
+        <%= form.text_field :cnpj, :id => 'cnpj', class: 'form-control', Placeholder: 'Somente números' %>
         <% if customer.errors[:cnpj].any? %>
           <span class="help-block m-b-none font-bold"><%= customer.errors[:cnpj].first %></span>
         <% end %>
@@ -61,3 +61,9 @@
     </div>
   </div>
 <% end %>
+
+<script type="text/javascript">
+    $(document).ready(function(){ 
+    $("#cnpj").mask("99.999.999/9999-99");
+  });
+</script>

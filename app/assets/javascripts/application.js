@@ -12,7 +12,10 @@
 //
 //= require rails-ujs
 //= require popper
+//= require turbolinks
 //= require jquery/jquery-3.1.1.min.js
+//= require jquery
+//= require jquery.mask
 //= require bootstrap-sprockets
 //= require metisMenu/jquery.metisMenu.js
 //= require pace/pace.min.js
@@ -27,7 +30,6 @@
 //= require select2/select2.min.js
 //= require tilt/tilt.jquery.min.js
 //= require main.js
-// require turbolinks
 //= require_tree .
 
 var time = 10; // Tempo de digitação em mili segundos

@@ -11,6 +11,8 @@ gem 'pg_search'
 # Login
 gem 'devise'
 
+gem 'jquery-rails'
+gem 'jquery-datatables'
 
 gem 'popper_js'
 
