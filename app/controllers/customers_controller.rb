@@ -61,6 +61,12 @@ class CustomersController < ApplicationController
     end
   end
 
+  def clientes
+  end
+
+  def novo_cliente
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_customer
