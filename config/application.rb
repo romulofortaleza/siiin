@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-module Myapp
+module SIIN
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -14,6 +14,19 @@ module Myapp
     config.to_prepare do
       Devise::SessionsController.layout 'login'
     end
+    config.serve_static_assets = true
+    config.load_defaults 5.2
+    config.i18n.default_locale = :"pt-BR"
+  	I18n.enforce_available_locales = false
+  	config.time_zone = "Brasilia"
+    config.action_mailer.smtp_settings = {
+        :authentication => :plain,
+        :address => "smtp.mailgun.org",
+        :port => 587,
+        :domain => "sandbox82423.mailgun.org",
+        :user_name => "postmaster@sandboxc83e576e591949708c6b10c5c45ece3c.mailgun.org",
+        :password => "72152b287706df5844bbd6cb64c585c5-3939b93a-2987e481"
+    }
 
     config.action_view.embed_authenticity_token_in_remote_forms = true
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
