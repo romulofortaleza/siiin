@@ -4,49 +4,48 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="ibox float-e-margins">
-        <div class="ibox-title">
-          <h5>Mostrando customer</h5>
-        </div>
-        <div class="ibox-content">
+        <div class="ibox-content-scaffold">
+          <center> <h2>Cliente <%= @customer.reason %></h2></center>
+           <div class="hr-line-dashed"></div>
             <form class="form-horizontal">
-                              <div class="form-group"><label class="col-sm-2 control-label">Reason</label>
+                <div class="form-group"><label class="col-sm-2 control-label">Razão:</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static">
+                    <p style="color:#565555;" class="form-control">
                       <%= @customer.reason %>
                     </p>
                   </div>                  
                 </div>
-                              <div class="form-group"><label class="col-sm-2 control-label">Cnpj</label>
+                <div class="form-group"><label class="col-sm-2 control-label">CNPJ:</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static">
+                    <p style="color:#565555;" class="form-control">
                       <%= @customer.cnpj %>
                     </p>
                   </div>                  
                 </div>
-                              <div class="form-group"><label class="col-sm-2 control-label">Phone</label>
+                <div class="form-group"><label class="col-sm-2 control-label">Telefone:</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static">
+                    <p style="color:#565555;" class="form-control">
                       <%= @customer.phone %>
                     </p>
                   </div>                  
                 </div>
-                              <div class="form-group"><label class="col-sm-2 control-label">Mayor</label>
+                <div class="form-group"><label class="col-sm-2 control-label">Prefeito:</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static">
+                    <p style="color:#565555;" class="form-control">
                       <%= @customer.mayor %>
                     </p>
                   </div>                  
                 </div>
-                              <div class="form-group"><label class="col-sm-2 control-label">Cpf mayor</label>
+                <div class="form-group"><label class="col-sm-2 control-label">CPF do Prefeito</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static">
+                    <p style="color:#565555;" class="form-control">
                       <%= @customer.cpf_mayor %>
                     </p>
                   </div>                  
                 </div>
-                              <div class="form-group"><label class="col-sm-2 control-label">City hall</label>
+                              <div class="form-group"><label class="col-sm-2 control-label">Endereço da Prefeitura:</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static">
+                    <p style="color:#565555;" class="form-control">
                       <%= @customer.city_hall %>
                     </p>
                   </div>                  
