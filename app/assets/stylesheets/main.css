@@ -176,7 +176,7 @@
     background: -webkit-linear-gradient(-135deg, #ffffff, #31797c 25%);
     background: -o-linear-gradient(-135deg, #ffffff, #31797c 45%);
     background: -moz-linear-gradient(-135deg, #ffffff, #ffffff 25%);
-    background: linear-gradient(-135deg, #31797c, #31797c 20%);
+    background: linear-gradient(-239deg, #658dd6f5, #3998a7 21%);
   }
   
   .wrap-login100 {
@@ -260,7 +260,7 @@
     width: 100%;
     height: 100%;
     box-shadow: 0px 0px 0px 0px;
-    color: rgba(87,184,70, 0.8);
+    color: rgba(83, 151, 228, 0.8)
   }
   
   .input100:focus + .focus-input100 {
@@ -299,7 +299,7 @@
     height: 100%;
     padding-left: 25px;
     pointer-events: none;
-    color: #666666;
+    color: #326e9c;
   
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
@@ -308,7 +308,7 @@
   }
   
   .input100:focus + .focus-input100 + .symbol-input100 {
-    color: #31797c;
+    color: #000000;
     padding-left: 28px;
   }
   
@@ -336,7 +336,7 @@
     width: 100%;
     height: 50px;
     border-radius: 25px;
-    background: #333333;
+    background: #376dc5;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -352,7 +352,7 @@
   }
   
   .login100-form-btn:hover {
-    background: #4f917e;
+    background: #000000;
   }
   
   
