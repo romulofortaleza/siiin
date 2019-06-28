@@ -54,11 +54,13 @@ class CustomersController < ApplicationController
   # DELETE /customers/1
   # DELETE /customers/1.json
   def destroy
-    @customer.destroy
-    respond_to do |format|
-      format.html { redirect_to customers_url, notice: 'Customer was successfully destroyed.' }
-      format.json { head :no_content }
+    mensagem = 'Cliente foi removido com sucesso.'
+    begin
+      @customer.destroy
+    rescue ActiveRecord::InvalidForeignKey
+      mensagem = 'Existem dependências que impedem a exclusão do Cliente.'
     end
+    redirect_to customers_url, notice: mensagem
   end
 
   def clientes
