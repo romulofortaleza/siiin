@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_28_131253) do
+ActiveRecord::Schema.define(version: 2019_06_27_193458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,32 +56,6 @@ ActiveRecord::Schema.define(version: 2019_03_28_131253) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "instrument_registrations", force: :cascade do |t|
-    t.integer "instrument_number"
-    t.integer "internal_number"
-    t.integer "extra_number"
-    t.string "object_agreement"
-    t.string "granting_organ"
-    t.string "linked_organ"
-    t.string "existence_im"
-    t.string "instituition_name"
-    t.string "value_transfer"
-    t.string "counterpart_value"
-    t.string "total"
-    t.date "signature_date"
-    t.date "end_date"
-    t.date "suspensive_date"
-    t.string "type"
-    t.string "address"
-    t.date "open_date"
-    t.string "organ"
-    t.string "user"
-    t.string "signature"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "instrument_type"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email", default: "", null: false
@@ -91,6 +65,7 @@ ActiveRecord::Schema.define(version: 2019_03_28_131253) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "cpf"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
