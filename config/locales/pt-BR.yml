@@ -225,5 +225,3 @@ pt-BR:
         password_confirmation: "Confirme sua senha"
         email: E-mail
         remember_me: Lembre-se de mim
-      customer:
-        reason: "Razão" 
