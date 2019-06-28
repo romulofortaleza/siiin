@@ -34,7 +34,7 @@
                                     <td>
                     <%= link_to fa_icon('eye'),  activity, class: 'btn btn-sm btn-success' %>                    
                     <%= link_to fa_icon('edit'), edit_activity_path(activity), class: 'btn btn-sm btn-warning' %>
-                    <%= link_to fa_icon('trash'), activity, method: :delete, data: { confirm: I18n.t('app.messages.are_you_sure') }, class: 'btn btn-sm btn-danger' %>                    
+                    <%= link_to fa_icon('trash'), activity, method: :delete, data: { confirm: "Você tem certeza?" }, class: 'btn btn-sm btn-danger' %>                    
                   </td>                    
                 </tr>
               <% end %>

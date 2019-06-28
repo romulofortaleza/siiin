@@ -31,7 +31,7 @@
                   <td>
                     <%%= link_to fa_icon('eye'),  <%= model_resource_name %>, class: 'btn btn-sm btn-success' %>                    
                     <%%= link_to fa_icon('edit'), edit_<%= singular_route_name %>_path(<%= singular_table_name %>), class: 'btn btn-sm btn-warning' %>
-                    <%%= link_to fa_icon('trash'), <%= model_resource_name %>, method: :delete, data: { confirm: I18n.t('app.messages.are_you_sure') }, class: 'btn btn-sm btn-danger' %>                    
+                    <%%= link_to fa_icon('trash'), <%= model_resource_name %>, method: :delete, data: { confirm: "Você tem certeza?" }, class: 'btn btn-sm btn-danger' %>                    
                   </td>                    
                 </tr>
               <%% end %>
